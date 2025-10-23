@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ukey_body"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include
+        android:id="@+id/ukey_header"
+        layout="@layout/ukey_view_header" />
+
+    <ScrollView
+        android:id="@+id/content_body"
+        style="@style/ukey_content_body"
+        android:layout_below="@+id/ukey_header" >
+
+        <LinearLayout
+            android:id="@+id/content"
+            style="@style/ukey_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ukey_listitem_single"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Display"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/base_input"
+                    style="@style/ukey_listitem_single"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/base_input_content"
+                        style="@style/ukey_listitem_single"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="2"
+                        android:background="@color/line"
+                        android:gravity="center"
+                        android:hint="input the content"
+                        android:inputType="text"
+                        android:maxLength="32" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:id="@+id/base_show_qr"
+                    style="@style/ukey_listitem_top"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/ukey_listitem_left_text"
+                        android:focusable="false"
+                        android:text="show QR code" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/base_show_paying"
+                    style="@style/ukey_listitem_middle"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/ukey_listitem_left_text"
+                        android:focusable="false"
+                        android:text="show Paying" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/base_show_success"
+                    style="@style/ukey_listitem_middle"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/ukey_listitem_left_text"
+                        android:focusable="false"
+                        android:text="show pay success" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/base_show_logo"
+                    style="@style/ukey_listitem_middle"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/ukey_listitem_left_text"
+                        android:focusable="false"
+                        android:text="show logo" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/base_adjust_backlight"
+                    style="@style/ukey_listitem_bottom"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/ukey_listitem_left_text"
+                        android:focusable="false"
+                        android:text="adjust backlight" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ukey_listitem_single"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Voice"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/base_voice_input"
+                    style="@style/ukey_listitem_single"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/base_voice_input_index"
+                        style="@style/ukey_listitem_single"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="2"
+                        android:background="@color/line"
+                        android:gravity="center"
+                        android:hint="input the index"
+                        android:inputType="number"
+                        android:maxLength="2" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:id="@+id/base_voice_amount"
+                    style="@style/ukey_listitem_top"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/ukey_listitem_left_text"
+                        android:focusable="false"
+                        android:text="Play the amount" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/base_voice_content"
+                    style="@style/ukey_listitem_bottom"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/ukey_listitem_left_text"
+                        android:focusable="false"
+                        android:text="Play the content of index" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

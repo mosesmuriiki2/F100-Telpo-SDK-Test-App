@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SDKDemo</string>
+
+    <string name="wiz_ped_clear">Clear</string>
+    <string name="wiz_ped_cancel">Cancel</string>
+    <string name="wiz_ped_enter">Enter</string>
+
+    <string name="tape_lamp_type">TurnOnType:</string>
+    <string name="tape_lamp_lightness">Lightness:</string>
+    <string name="tape_lamp_lightness_step_gap">step/gap:</string>
+    <string name="tape_lamp_rgb_scope_hint">0–255</string>
+    <string name="tape_lamp_min_lightness">0–100</string>
+    <string name="tape_lamp_max_lightness">0–100</string>
+    <string name="tape_lamp_rgb_scope_set_hint">Input the value of RGB:</string>
+    <string-array name="tape_lamp_type_list">
+        <item>Tape lamp</item>
+        <item>Breath lamp</item>
+        <item>Marquee lamp</item>
+    </string-array>
+
+
+    <!-- Device Activity -->
+    <string name="Device_View">Device View</string>
+</resources>
